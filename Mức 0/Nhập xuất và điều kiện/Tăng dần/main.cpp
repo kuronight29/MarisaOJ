@@ -10,11 +10,9 @@ using namespace std;
 int main() {
     //freopen(taskname ".inp", "r", stdin);
     //freopen(taskname ".out", "w", stdout);
-    double n;
-    cin >> n;
-    // tinh chu vi va dien tich hinh tron
-    long double dientich = n * n * 3.14;
-    long double chuvi = 2 * n * 3.14*1.00000000000;
-    cout << fixed << setprecision(3) << chuvi << " " << dientich << endl;
+    ll a[3];
+    for (int i = 0; i < 3; i++) cin >> a[i];
+    sort(a, a + 3);
+    cout << a[0] << " " << a[1] << " " << a[2];
     return 0;
 }

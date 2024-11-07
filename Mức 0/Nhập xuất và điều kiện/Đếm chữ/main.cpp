@@ -10,11 +10,12 @@ using namespace std;
 int main() {
     //freopen(taskname ".inp", "r", stdin);
     //freopen(taskname ".out", "w", stdout);
-    double n;
-    cin >> n;
-    // tinh chu vi va dien tich hinh tron
-    long double dientich = n * n * 3.14;
-    long double chuvi = 2 * n * 3.14*1.00000000000;
-    cout << fixed << setprecision(3) << chuvi << " " << dientich << endl;
+    char a, b;
+    cin >> a >> b;
+    ll dem = 0;
+    if (a >= 'A' && a <= 'Z') a += 32;
+    if (b >= 'A' && b <= 'Z') b += 32;
+    for (char i = a+1; i < b; i++) dem++;
+    cout << dem;
     return 0;
 }
