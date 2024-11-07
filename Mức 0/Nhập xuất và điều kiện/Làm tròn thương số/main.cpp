@@ -10,20 +10,8 @@ using namespace std;
 int main() {
     //freopen(taskname ".inp", "r", stdin);
     //freopen(taskname ".out", "w", stdout);
-    ll a,b;
+    double a,b;
     cin >> a >> b;
-    if(a == 0) {
-        if(b == 0) {
-            cout << "INFINITE SOLUTIONS";
-        } else {
-            cout << "NO SOLUTION";
-        }
-    } else {
-        if(-b % a == 0) {
-            cout << -b / a;
-        } else {
-            cout << "NO SOLUTION";
-        }
-    }
+    cout << setprecision(2) << fixed << a/b << endl;
     return 0;
 }
