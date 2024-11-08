@@ -8,7 +8,7 @@ Chúng tôi luôn hoan nghênh các đóng góp từ cộng đồng. Nếu bạn
 
 ## Liên hệ
 
-Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ qua email: [herryvu.dev@gmail.com](mailto:herryvu.dev@gmail.com).
+Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ qua email: [herryvu.dev@gmail.com](mailto:herryvu.dev@gmail.com). Hoặc Discord: longvuuuu
 
 Cảm ơn bạn đã quan tâm và sử dụng repo này!
 
