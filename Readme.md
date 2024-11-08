@@ -1,6 +1,6 @@
 # Giới thiệu
 
-Đây là repo chứa tất cả các giải pháp cho tất cả các bài tập trên MarisaOJ. Mục tiêu của repo này là cung cấp các giải pháp chi tiết và dễ hiểu cho từng bài tập, giúp người học có thể tham khảo và học hỏi.
+Đây là repo chứa tất cả các giải pháp cho tất cả các bài tập trên MarisaOJ. Mục tiêu của repo này là cung cấp các code giải cho từng bài tập, giúp người học có thể tham khảo và học hỏi.
 
 ## Đóng góp
 
