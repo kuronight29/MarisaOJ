@@ -8,6 +8,7 @@
 #define pb push_back
 using namespace std;
 
+
 int main() {
     if(fopen((string(taskname) + ".inp").c_str(), "r") != NULL) {
         freopen((string(taskname) + ".inp").c_str(), "r", stdin);
@@ -15,24 +16,38 @@ int main() {
     }
     ll n,m,x,y;
     cin >> n >> m >> x >> y;
-    vector<vector<ll>> a(n,vector<ll>(m));
+    ll a[n][m];
     for(ll i=0;i<n;i++){
         for(ll j=0;j<m;j++){
             cin >> a[i][j];
         }
+    } 
+    x--,y--;
+    ll t=x,u=y;
+    ll res=0;
+    while(t>0&&u>0){
+        t--;
+        u--;
+        res +=a[t][u];
     }
-    ll sum1 = 0, sum2 = 0;
-    for(ll i = 0; i < n; i++) {
-        for(ll j = 0; j < m; j++) {
-            if(i - j == x - y) {
-                sum1 += a[i][j];
-            }
-            if(i + j == x + y) {
-                sum2 += a[i][j];
-            }
-        }
+    t=x,u=y;
+    while(t>0&&u<m-1){
+        t--;
+        u++;
+        res +=a[t][u];
     }
-    cout << sum1 << " " << sum2 << endl;
-    
+    t=x,u=y;
+    while(t<n-1&&u<m-1){
+        t++;
+        u++;
+        res +=a[t][u];
+    }
+    t=x,u=y;
+    while(t<n-1&&u>0){
+        t++;
+        u--;
+        res +=a[t][u];
+    }
+    cout << res+a[x][y] << endl;
     return 0;
 }
