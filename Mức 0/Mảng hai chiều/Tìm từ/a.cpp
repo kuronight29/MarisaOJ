@@ -16,7 +16,7 @@ int simp() {
     }
     ll n, m;
     cin >> n >> m;
-    string a[n][m];
+    char a[n][m];
     for(ll i = 0; i < n; i++){
         for(ll j = 0; j < m; j++){
             cin >> a[i][j];
@@ -24,28 +24,33 @@ int simp() {
     }
     string st;
     cin >> st;
-    ll dem=0;
-    if(m>=st.size()){
-        for(ll i = 0; i < n; i++){
-            for(ll j = 0; j < st.size(); j++){
-                if(a[i][j]==st){
-                    dem++;
-                }
+    ll dem = 0;
+    ll l = st.length();
+    string res = st;
+    reverse(res.begin(), res.end());
+    for(ll i = 0; i < n; i++) {
+        for(ll j = 0; j <= m-l; j++) {
+            string x = "";
+            for(ll k = 0; k < l; k++) {
+                x += a[i][j+k];
             }
+            if(x == st || x == res) dem++;
         }
     }
-    if(m < st.size()){
-    for(ll i = 0; i < m; i++){
-        string s ="";
-        for(ll j = 0; j < n; j++){
-            s+=a[i][j][0];
+    
+    for(ll j = 0; j < m; j++) {
+        for(ll i = 0; i <= n-l; i++) {
+            string y = "";
+            for(ll k = 0; k < l; k++) {
+                y += a[i+k][j];
+            }
+            if(y == st || y == res) dem++;
         }
-        if(s==st) dem++;
     }
-    }
-    if(dem==1){
+
+    if(dem >= 1) {
         cout << "YES";
-    }else{
+    } else {
         cout << "NO";
     }
     return 0;
