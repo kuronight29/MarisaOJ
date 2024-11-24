@@ -14,15 +14,27 @@ int simp() {
         freopen((string(taskname) + ".inp").c_str(), "r", stdin);
         freopen((string(taskname) + ".out").c_str(), "w", stdout);
     }
-    ll m, n;
-    cin >> m >> n;
-    ll a[m][n];
-    for(ll i = 0; i < m; i++){
+    ll n;
+    cin >> n;
+    ll a[n][n], b[n][n];
+    
+    for(ll i = 0; i < n; i++){
         for(ll j = 0; j < n; j++){
             cin >> a[i][j];
         }
     }
     
-    
+    for(ll i = 0; i < n; i++){
+        for(ll j = 0; j < n; j++){
+            b[j][n-1-i] = a[i][j];
+        }
+    }
+
+    for(ll i = 0; i < n; i++){
+        for(ll j = 0; j < n; j++){
+            cout << b[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
